@@ -70,8 +70,10 @@ class Events extends Component {
         <ul className="list-container">
           {eventsList.map(eachUser => (
             <li key={eachUser.id}>
-              <img src={eachUser.imageUrl} alt="event" />
-              <h1>{eachUser.name}</h1>
+              <button type="button" onClick={this.onClickStatus}>
+                <img src={eachUser.imageUrl} alt="event" />
+              </button>
+              <p>{eachUser.name}</p>
               <p>{eachUser.location}</p>
             </li>
           ))}
